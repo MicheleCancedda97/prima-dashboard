@@ -1,5 +1,4 @@
 import React from "react";
-import Text from "../Text"
 
 const colorMap = {
     first: {
@@ -18,8 +17,7 @@ const colorMap = {
         color: 'white'
     }
 }
-
-export default function Card ({children, backgroundColor}) {
+export default function Card({children, backgroundColor}) {
     return <div style={{
         ...colorMap.first,
         ...colorMap[backgroundColor]

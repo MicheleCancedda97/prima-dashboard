@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Text, Title, Card, List } from './components';
 import { Avatar } from './components';
-
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
+import Cards from './components/Cards';
 
 
 
@@ -15,19 +15,11 @@ function App() {
         <div><Avatar /></div>
       </div>
       <Text>default</Text>
-      <div>
-        <List days={[dayjs().format(), dayjs().add(1, 'day').format()]} />
-      </div>
 
-      <Card backgroundColor='first'>
-        <Avatar />
-        <Text color='primary' size='title'>title1</Text>
-        <Text color='secondary' size='caption'>caption2</Text>
-      </Card>
-
-      
-    </div>
-  );
+      <List days={[dayjs().format(), dayjs().add(1, 'day').format()]} />
+      <Cards items={[{ name: 'Andrea', caption: 'dddd', color:'sehhcondhfhf'}, { name: 'Piero',caption:'provaaa', color:'first' }, { name: 'Michele' }]} />
+    </div> 
+  )
 }
 
 export default App;
