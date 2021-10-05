@@ -7,7 +7,7 @@ const colorMap = {
         width: 320,
         height: 160,
         borderRadius: 20,
-        margin: 10,
+        margin: '0 auto',
     },
     second: {
         backgroundColor: 'yellow',
