@@ -1,21 +1,15 @@
 import React from "react";
-import Card from "../Card";
-import { Avatar, Color } from "..";
-import { Text } from "..";
+import CardItem from "./item";
 
 
-
-
-export default function Cards({ items = [], color= ["first", "second"]}) {
+export default function Cards({ items = [] }) {
     return (
         <div>
-             
-              {items.map((item) => <Card>
-                <Avatar />
-                <Text color='primary' size='title'>{item.name}</Text>
-                <Text color='secondary' size='caption'>{item.caption}</Text>
-                <Color>{item.color} </Color>   
-            </Card>)}
+            {items.map((item) => <CardItem
+                key={item.name}
+                {...item}
+            //name={item.name} caption={item.caption} 
+            />)}
         </div>
     )
 }

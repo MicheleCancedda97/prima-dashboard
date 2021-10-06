@@ -11,6 +11,9 @@ const sizeMap = {
     },
 }
 const colorMap = {
+    inverse:{
+        color: 'white'
+    },
     primary : {
         color: 'green' 
     },

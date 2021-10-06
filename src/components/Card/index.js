@@ -1,26 +1,24 @@
 import React from "react";
 
 const colorMap = {
-    first: {
-        backgroundColor: 'red',
+    primary: {
+        backgroundColor: '#e74c3c',
         width: 320,
         height: 160,
         borderRadius: 20,
         margin: '0 auto',
     },
-    second: {
-        backgroundColor: 'yellow',
+    secondary: {
+        backgroundColor: '#f1c40f',
     },
-    third: {
-        backgroundColor: 'blue',
-        fontSize: 25,
-        color: 'white'
+    thertiary: {
+        backgroundColor: '#3498db',
     }
 }
-export default function Card({children, backgroundColor}) {
+export default function Card({children, variant}) {
     return <div style={{
-        ...colorMap.first,
-        ...colorMap[backgroundColor]
+        ...colorMap.primary,
+        ...colorMap[variant]
     }}>
         <p>{children}</p>
     </div>

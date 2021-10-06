@@ -5,7 +5,7 @@ const listMap = {
     display: "flex",
     flexDirection: "row",
     listElement: {
-        marginLeft: 100
+    margin: '0 auto'
     }
 }
 
