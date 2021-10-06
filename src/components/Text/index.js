@@ -3,12 +3,18 @@ import React from "react";
 const sizeMap = {
     title: {
         fontSize: 18,
-        letterSpacing: 10
+    },
+    caption: {
+        fontSize: 10,
     },
     body: {
-        fontSize: 14,
-        letterSpacing: 1
+
+        fontSize: 15,
     },
+    currentDay: {
+        fontSize : 20
+    }
+
 }
 const colorMap = {
     inverse:{
@@ -19,15 +25,22 @@ const colorMap = {
     },
     secondary : {
          color: 'blue'
-    }
+    },
+    text : {
+         color: '#333'
+    },
+    current : {
+        color: 'white',
+    },
 }
 
 export default function Text({ children, color, size }) {
-    return <p style={{
+    return <span style={{
+        
         ...colorMap.primary,
         ...colorMap[color],
         ...sizeMap.body, // default
         ...sizeMap[size],
-    }}>{children}</p>
+    }}>{children}</span>
 }
 

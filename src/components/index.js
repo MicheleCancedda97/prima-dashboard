@@ -3,4 +3,5 @@ export {default as List} from './List';
 export {default as Avatar} from './Avatar';
 export {default as Title} from './Title';
 export {default as Card} from './Card';
-export {default as Color} from './Color'
+export {default as Badge} from './Badge'
+export {default as Chip} from './Chip'

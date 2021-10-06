@@ -1,24 +1,18 @@
-import dayjs from "dayjs";
 import React from "react";
+import ListItem from "./item";
+
 
 const listMap = {
     display: "flex",
     flexDirection: "row",
-    listElement: {
-    margin: '0 auto'
-    }
+    justifyContent: 'space-around'
 }
 
 export default function List({ days }) {
-    const list = days.map((day) => <li style={listMap.listElement} key={day}>
-        {dayjs(day).format('dddd')}
-        {dayjs(day).format('DD')}
-    </li>
-    );
-
+    const list = days.map((day,i) => <ListItem key={i} day={day} />);
     return (
-        <ul style={listMap}>
+        <div style={listMap}>
             {list}
-        </ul>
+        </div>
     )
 }
