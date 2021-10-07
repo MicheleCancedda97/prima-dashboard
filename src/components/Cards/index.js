@@ -5,11 +5,7 @@ import CardItem from "./item";
 export default function Cards({ items = [] }) {
     return (
         <div>
-            {items.map((item) => <CardItem
-                key={item.name}
-                {...item}
-            //name={item.name} caption={item.caption} 
-            />)}
+            {items.map((item) => <CardItem key={item.name} {...item} />)}
         </div>
     )
 }

@@ -2,17 +2,19 @@ import React from "react";
 
 const sizeMap = {
     title: {
-        fontSize: 18,
+        fontSize: 25,
     },
     caption: {
+        fontSize: 13,
+    },
+    small: {
         fontSize: 10,
     },
     body: {
-
         fontSize: 15,
     },
     currentDay: {
-        fontSize : 20
+        fontSize : 13
     }
 
 }
@@ -21,7 +23,7 @@ const colorMap = {
         color: 'white'
     },
     primary : {
-        color: 'green' 
+        color: 'black' 
     },
     secondary : {
          color: 'blue'
@@ -31,6 +33,9 @@ const colorMap = {
     },
     current : {
         color: 'white',
+    },
+    sett : {
+        color: 'grey',
     },
 }
 

@@ -3,5 +3,8 @@ export {default as List} from './List';
 export {default as Avatar} from './Avatar';
 export {default as Title} from './Title';
 export {default as Card} from './Card';
-export {default as Badge} from './Badge'
-export {default as Chip} from './Chip'
+export {default as Badge} from './Badge';
+export {default as Chip} from './Chip';
+export {default as Chart} from './Chart';
+export {default as Separator} from './Separator';
+export {default as Header} from './Header'

@@ -1,15 +1,16 @@
 import React from 'react'
-import { Avatar, Card, Text } from '..'
+import { Avatar, Card, Text, Chart } from '..'
 
 export default function CardItem({ color, name, caption, image }) {
     return (
         <Card variant={color}>
-            <Avatar hidden={true} src={image} />           
-            <div style={{display:'flex', flexDirection:'column', flexWrap:1 }}> 
-            <Text color={color !== 'secondary' && 'inverse'} size='title'>{name}</Text>
-            
-            <Text color={'inverse'} size='caption'>{caption}</Text>
-        </div> 
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'space-between', padding: 10 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', }}>
+                    <Text color={'inverse'} size='title'>{name}</Text>
+                    <Text color={'inverse'} size='caption'>{caption}</Text>
+                </div>
+                <Chart />
+            </div>
         </Card>
     )
 }

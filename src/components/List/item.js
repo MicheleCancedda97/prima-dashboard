@@ -9,7 +9,7 @@ export default function ListItem({ day }) {
     const isNow = dayjs(now).isSame(day, 'day')
     return (
         <div >
-            <Text color='text'size="caption">{dayjs(day).format('ddd')}</Text>
+            <Text color='sett'size="caption">{dayjs(day).format('ddd')}</Text>
             <div>
             {isNow
                 ? <Chip>{dayjs(day).format('DD')}</Chip>

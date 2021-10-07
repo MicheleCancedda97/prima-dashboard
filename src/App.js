@@ -1,10 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import { Text, Title, Card, List, Badge } from './components';
-import { Avatar } from './components';
-import dayjs from 'dayjs';
+import { List, Separator, Header } from './components';
 import Cards from './components/Cards';
-
 
 const now = new Date();
 const nextWeek = now * 1 + 7 * 24 * 3600 * 1000;
@@ -24,31 +20,13 @@ const mock = [
   { name: 'Michele', caption: 'weee', color: 'thertiary', image: 'https://randomuser.me/api/portraits/men/48.jpg' }
 ]
 
-//style={{position: 'relative', }}
 function App() {
   return (
     <div className="App">
-
-      <div><Title color='oppositewhite' size='title1'>TITOLO</Title></div>
-
-      
-        <div >
-          <Badge value={10}>
-            <Avatar src='https://randomuser.me/api/portraits/men/46.jpg'></Avatar>
-          </Badge>
-        </div>
-        
-        
-      
-
-      <Text>default</Text>
-
-
+      <Header />
       <List days={getDates(now, nextWeek)} />
-
+      <Separator />
       <Cards items={mock} />
-
-
     </div>
   )
 }
