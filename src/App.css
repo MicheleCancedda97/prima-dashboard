@@ -1,10 +1,8 @@
 .App {
   text-align: center;
   padding: 20px;
+  height: calc(100vh - 110px);
 }
-
-
-
 
 .App-logo {
   height: 40vmin;

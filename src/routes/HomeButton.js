@@ -2,15 +2,16 @@ import React, { memo } from 'react'
 import { useHistory } from 'react-router';
 
 
-export default function HomeButton() {
+export default function BackButton() {
     const history = useHistory();
   
     function handleClick() {
-      history.push("/about");
+      history.goBack()
     }
+    
     return (
-      <button type="button" onClick={handleClick}>
-        Home
+      <button className="button icon-left" type="button" onClick={handleClick}>
+        Back
       </button>
     );
   }

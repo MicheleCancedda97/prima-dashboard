@@ -9,8 +9,13 @@ const style = {
     //borderRadius: 50,
 }
 
-export default function List({ days }) {
-    const list = days.map((day, i) => <ListItem key={i} day={day} />);
+export default function List({ days, selected, onSelectWeek }) {
+    const list = days.map((day, i) => <ListItem
+        key={i}
+        day={day}
+        selected={selected}
+        onSelectWeek={onSelectWeek}
+    />);
     return (
         <div style={style}>
             {list}

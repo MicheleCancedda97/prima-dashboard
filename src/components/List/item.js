@@ -3,18 +3,21 @@ import dayjs from "dayjs";
 import { Text } from "..";
 import Chip from "../Chip";
 
-const now = new Date();
+export default function ListItem({ day, onSelectWeek, selected }) {
 
-export default function ListItem({ day }) {
-    const isNow = dayjs(now).isSame(day, 'day')
+    const isSelected = dayjs(selected).isSame(day, 'day')
+    const isNow = dayjs().isSame(day, 'day')
+
     return (
-        <div >
-            <Text color='sett'size="caption">{dayjs(day).format('ddd')}</Text>
+        <div onClick={() => onSelectWeek(day)}>
+            <Text color='sett' size="caption">{dayjs(day).format('ddd')}</Text>
             <div>
-            {isNow
-                ? <Chip>{dayjs(day).format('DD')}</Chip>
-                : <Text color='text'>{dayjs(day).format('DD')}</Text>
-            }
+                {isSelected
+                    ? <Chip>{dayjs(day).format('DD')}</Chip>
+                    : isNow
+                        ? <Chip color="gray">{dayjs(day).format('DD')}</Chip>
+                        : <Text color='text'>{dayjs(day).format('DD')}</Text>
+                }
             </div>
         </div>
 

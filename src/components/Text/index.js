@@ -39,7 +39,7 @@ const colorMap = {
     },
 }
 
-export default function Text({ children, color, size }) {
+export default function Text({ children, color, size}) {
     return <span style={{
         
         ...colorMap.primary,

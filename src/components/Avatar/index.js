@@ -1,11 +1,13 @@
 import React from "react";
 import ImgExample from '../../img/persona.jpeg'
 import Badge from '../Badge'
+import { Redirect } from "react-router";
 //import image from 'https://randomuser.me/api/portraits/men/46.jpg'
 // MAPPA
 
-export default function Avatar({ src = '', path}) {
+export default function Avatar({ src = ''}) {
     return (
+        
         <img
             style={{
                 width: 50,
@@ -13,7 +15,6 @@ export default function Avatar({ src = '', path}) {
                 borderRadius: 25,
             }}
             src={src}
-            path={path}
         />
     )
 }
